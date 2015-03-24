@@ -1,0 +1,32 @@
+{
+    "name": "node_rest_hello_world",
+    "version": "0.0.1",
+    "description": "Node.js Rest Hello World Demo",
+    "author": "Florian Klemt <florian.klemt@looklocal.co>",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/flosky/node_rest_hello_world.git"
+    },
+    "scripts": {
+        "hint": "node node_modules/jshint/bin/jshint src/",
+        "checkStyle": "node node_modules/jscs/bin/jscs src/",
+        "coverage": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- test/*",
+        "start": "node server.js",
+        "test": "npm run-script hint && npm run-script checkStyle && npm run-script unitTest && npm run-script coverage",
+        "unitTest": "node node_modules/mocha/bin/mocha --reporter nyan test"
+    },
+    "dependencies": {
+        "express": "4.2.x",
+        "body-parser": "1.10.x",
+        "winston": "0.8.x"
+    },
+    "devDependencies": {
+        "mocha": "2.0.x",
+        "supertest": "0.15.x",
+        "sinon": "1.12.x",
+        "jshint": "2.5.x",
+        "jscs": "1.8.x",
+        "istanbul": "0.3.x",
+        "mocha-istanbul": "0.2.x"
+    }
+}
